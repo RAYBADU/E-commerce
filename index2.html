@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>E-COMMERCE</title>
+  </head>
+
+  <body class="font-[inter] bg-[#F2F0F1] text-gray-900" id="body">
+    <!-- Top Header -->
+    <header class="fixed top-0 w-full z-50">
+      <p class="text-center bg-black text-white py-3 text-sm md:text-base">
+        Sign up and get 20% off your first order.
+        <a
+          href="#"
+          class="underline hover:text-orange-500 transition duration-300 px-2"
+        >
+          Sign Up Now
+        </a>
+      </p>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="fixed top-[50px] w-full bg-white shadow-md z-40">
+      <div
+        class="container mx-auto flex items-center justify-between px-5 py-3"
+      >
+        <!-- Hamburger for small screens -->
+        <div class="md:hidden">
+          <i class="fa-solid fa-bars text-2xl cursor-pointer"></i>
+        </div>
+
+        <!-- Logo -->
+        <p class="text-3xl md:text-4xl font-bold">SHOP.CO</p>
+
+        <!-- Menu Links -->
+        <ul class="hidden md:flex items-center space-x-6">
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-1 hover:text-gray-500 transition duration-300"
+            >
+              Shop
+              <i class="fa-solid fa-caret-down text-gray-500"></i>
+            </a>
+          </li>
+          <li><a href="#" class="hover:text-gray-500">On Sale</a></li>
+          <li><a href="#" class="hover:text-gray-500">New Arrivals</a></li>
+          <li><a href="#" class="hover:text-gray-500">Brands</a></li>
+        </ul>
+
+        <!-- Search Bar -->
+        <div class="relative hidden md:block">
+          <i
+            class="fa-solid fa-magnifying-glass absolute top-3 left-4 text-gray-500"
+          ></i>
+          <input
+            type="text"
+            placeholder="Search for products"
+            class="bg-gray-200 pl-10 pr-4 py-2 rounded-full w-64 focus:outline-none"
+          />
+        </div>
+
+        <!-- Icons -->
+        <div class="flex items-center space-x-4 md:space-x-6">
+          <i
+            class="fa-solid fa-cart-shopping text-lg md:text-xl cursor-pointer hover:scale-110 transition"
+            id="cart-icon"
+          ></i>
+          <i
+            class="fa-solid fa-user text-lg md:text-xl cursor-pointer hover:scale-110 transition"
+            id="user-icon"
+          ></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="pt-[120px]">
+      <!-- section 1 -->
+      <section class="pt-[30px] container mx-auto">
+        <div class="grid place-items-center sm:grid-cols-1 md:grid-cols-2">
+          <!-- Text -->
+          <div class="py-4 px-5">
+            <h1 class="font-[inter] font-bold text-5xl max-md:text-xl">
+              FIND CLOTHES THAT MATCHES YOUR STYLE
+            </h1>
+            <p class="sm:text-sm md:text-lg text-gray-500 mt-5">
+              Browse through our diverse range of meticulously crafted garments,
+              designed to bring out your individuality and cater to your sense
+              of style.
+            </p>
+            <!-- Button -->
+            <button
+              class="bg-black text-white mt-5 rounded-full px-8 py-4 hover:opacity-[0.8] transition duration-300 cursor-pointer max-md:px-4 max-md:py-3 max-md:text-sm max-md:container"
+            >
+              Shop Now
+            </button>
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-4 mt-5">
+              <div class="max-md:col-span-6">
+                <h1 class="text-3xl max-md:text-xl font-semibold">200+</h1>
+                <p class="text-gray-500">International Brands</p>
+              </div>
+              <div class="max-md:col-span-6">
+                <h1 class="text-3xl max-md:text-xl font-semibold">2000+</h1>
+                <p class="text-gray-500">High Quality Products</p>
+              </div>
+              <div class="max-md:col-span-12 place-items-center">
+                <h1 class="text-3xl max-md:text-xl font-semibold">30,000+</h1>
+                <p class="text-gray-500">Happy Customers</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div>
+            <img
+              src="trendy-fashion-couple.jpg"
+              alt=""
+              class="w-[500px] max-md:w-[300px]"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- advert section -->
+      <section
+        class="bg-black py-5 px-4 grid grid-cols-3 md:grid-cols-5 place-items-center gap-6"
+      >
+        <img src="versace.png" alt="Versace" class="w-20 md:w-28" />
+        <img src="zara.png" alt="Zara" class="w-20 md:w-28" />
+        <img src="gucci.png" alt="Gucci" class="w-20 md:w-28" />
+        <img src="prada.png" alt="Prada" class="w-20 md:w-28" />
+        <img src="calvin klein.png" alt="Calvin Klein" class="w-20 md:w-28" />
+      </section>
+
+      <!-- overlay -->
+      <div
+        class="inset-0 hidden fixed bg-[#00000080] transition-all duration-800"
+        id="cart-card"
+      >
+        <!-- Cart modal -->
+        <div
+          class="card bg-white fixed top-1/2 mt-10 left-1/2 transform -translate-1/2 w-lg max-md:w-md max-sm:w-sm p-4 shadow-lg rounded-md"
+        >
+          <button
+            class="absolute top-5 right-5 text-4xl max-md:text-3xl cursor-pointer"
+            id="close-btn"
+          >
+            &times
+          </button>
+          <h1
+            class="text-2xl max-md:text-lg font-semibold uppercase font-[poppins]"
+          >
+            Your Cart
+          </h1>
+          <!-- grid container -->
+          <div class="block space-y-2">
+            <!-- items -->
+            <!-- first item -->
+            <div class="flex rounded-lg bg-white shadow-md p-4 mt-5" id="item1">
+              <img src="shirt1.png" alt="" class="w-20 h-30 rounded-lg" />
+              <div class="text px-4">
+                <p class="text-xl max-md:text-lg font-semibold">
+                  Gradient Graphic T-Shirt
+                </p>
+                <p>Size: <span class="text-gray-500">Large</span></p>
+                <p>Color: <span class="text-gray-500">White</span></p>
+                <p
+                  class="font-semibold text-2xl max-md:text-lg mt-2"
+                  id="price1"
+                >
+                  $145
+                </p>
+                <div class="space-x-5 flex items-center">
+                  <button class="mt-2 cursor-pointer" id="dustbin1">🗑️</button>
+                  <button class="text-2xl cursor-pointer" id="minus1">-</button>
+                  <p class="" id="value1">1</p>
+                  <button class="text-2xl cursor-pointer" id="add1">+</button>
+                </div>
+              </div>
+            </div>
+            <!-- second item -->
+            <div class="flex rounded-lg bg-white shadow-md p-4 mt-5" id="item2">
+              <img src="shirt2.png" alt="" class="w-20 h-30 rounded-lg" />
+              <div class="text px-4">
+                <p class="text-xl max-md:text-lg font-semibold">
+                  Checkered Shirt
+                </p>
+                <p>Size: <span class="text-gray-500">medium</span></p>
+                <p>Color: <span class="text-gray-500">Red</span></p>
+                <p
+                  class="font-semibold text-2xl max-md:text-lg mt-2"
+                  id="price2"
+                >
+                  $180
+                </p>
+                <div class="space-x-5 flex items-center">
+                  <button class="mt-2 cursor-pointer" id="dustbin2">🗑️</button>
+                  <button class="text-2xl cursor-pointer" id="minus2">-</button>
+                  <p class="" id="value2">1</p>
+                  <button class="text-2xl cursor-pointer" id="add2">+</button>
+                </div>
+              </div>
+            </div>
+            <!-- third item -->
+            <div class="flex rounded-lg bg-white shadow-md p-4 mt-5" id="item3">
+              <img src="jeans.png" alt="" class="w-20 h-30 rounded-lg" />
+              <div class="text px-4">
+                <p class="text-xl font-semibold">Skinny Fit Jeans</p>
+                <p>Size: <span class="text-gray-500">Large</span></p>
+                <p>Color: <span class="text-gray-500">Blue</span></p>
+                <p
+                  class="font-semibold text-2xl max-md:text-lg mt-2"
+                  id="price3"
+                >
+                  $250
+                </p>
+                <div class="space-x-5 flex items-center">
+                  <button class="mt-2 cursor-pointer" id="dustbin3">🗑️</button>
+                  <button class="text-2xl cursor-pointer" id="minus3">-</button>
+                  <p class="" id="value3">1</p>
+                  <button class="text-2xl cursor-pointer" id="add3">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="bg-black text-white px-2 py-3 rounded-full container mx-auto max-md:text-sm cursor-pointer hover:opacity-[0.8] transition duration-300"
+            id="checkout-btn"
+          >
+            CheckOut
+          </button>
+        </div>
+      </div>
+
+      <!--  checkout card -->
+      <div class="fixed inset-0 bg-[#00000080] hidden" id="checkout-card">
+        <div
+          class="absolute bg-white rounded-lg p-5 transform top-1/2 left-1/2 -translate-1/2 shadow-md w-[30rem] max-md:w-[20rem]"
+        >
+          <h1 class="font-semibold text-2xl max-md:text-xl">Order Summary</h1>
+          <div class="flex justify-between text-gray-500 mt-10">
+            <div>
+              <p>Subtotal</p>
+              <p>Discount</p>
+              <p>Delivery Fee</p>
+            </div>
+            <div>
+              <p class="text-black font-semibold">$565</p>
+              <p class="text-red-500 font-semibold">$-113</p>
+              <p class="text-black font-semibold">$15</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <p class="mt-5 font-semibold text-lg">Total</p>
+            <p class="text-black font-semibold text-lg mt-5">$467.00</p>
+          </div>
+          <button
+            class="bg-black text-white px-2 py-3 rounded-full container mx-auto max-md:text-sm cursor-pointer hover:opacity-[0.8] transition duration-300 mt-5"
+            id="done-btn"
+          >
+            Done
+          </button>
+        </div>
+      </div>
+
+      <!-- user profile -->
+      <div class="fixed inset-0 bg-[#00000080] hidden" id="user-card">
+        <div
+          class="bg-white p-5 rounded-lg w-[20rem] md:w-[30rem] absolute top-1/2 left-1/2 -translate-1/2"
+        >
+          <p class="font-semibold md:text-2xl">Your Account</p>
+          <div class="flex items-center space-x-4">
+            <img
+              src="user.jpg"
+              alt="user"
+              class="w-10 md:w-20 rounded-full mt-5"
+            />
+
+            <div>
+              <p class="text-gray-500">Mary Jane</p>
+              <p class="text-gray-500">maryjane@gmail.com</p>
+            </div>
+          </div>
+          <p class="mt-2 py-2">Order history</p>
+          <p class="py-1">Profile Settings</p>
+          <p class="py-1">Saved Addresses</p>
+         <a href="index.html"> <button
+            class="mx-auto text-center container bg-black text-white py-2 rounded-lg mt-4 cursor-pointer hover:opacity-[0.8] transition-all"
+            id="log-out"
+          >
+            Logout
+          </button></a>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
