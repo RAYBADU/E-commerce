@@ -4,6 +4,7 @@ const cartCard = document.getElementById("cart-card");
 const cartIcon = document.getElementById("cart-icon");
 const doneBtn = document.getElementById("done-btn");
 const checkoutCard = document.getElementById("checkout-card");
+const userCloseBtn = document.getElementById("user-close-btn");
 
 doneBtn.addEventListener("click", () => {
   checkoutCard.classList.add("hidden");
@@ -71,32 +72,6 @@ minus2.addEventListener("click", () => {
   price2.textContent = `$${count2 * price}`;
 });
 
-// third card
-const value3 = document.getElementById("value3");
-const minus3 = document.getElementById("minus3");
-const add3 = document.getElementById("add3");
-const price3 = document.getElementById("price3");
-const dustBin3 = document.getElementById("dustbin3");
-const item3 = document.getElementById("item3");
-
-dustBin3.addEventListener("click", () => {
-  item3.classList.add("hidden");
-});
-let count3 = 1;
-add3.addEventListener("click", () => {
-  let price = 250;
-  count3++;
-  value3.textContent = count3;
-  price3.textContent = `$${count3 * price}`;
-});
-minus3.addEventListener("click", () => {
-  let price = 250;
-
-  count3--;
-  value3.textContent = count3;
-  price3.textContent = `$${count3 * price}`;
-});
-
 // Checkout card and button
 const checkoutBtn = document.getElementById("checkout-btn");
 
@@ -119,3 +94,47 @@ userIcon.addEventListener("click", () => {
 logOut.addEventListener("click", () => {
   userCard.classList.add("hidden");
 });
+userCloseBtn.addEventListener("click", () => {
+  userCard.classList.add("hidden");
+});
+//  IO
+
+const section = document.querySelectorAll(".section");
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("opacity-100", "translate-x-0");
+    }
+  }),
+    {
+      threshold: 0.4,
+    };
+});
+
+section.forEach((section) => observer.observe(section));
+
+// IO FOR TEXT
+const text = document.querySelectorAll(".text");
+const observer1 = new IntersectionObserver((entries, observer1) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("opacity-100", "translate-y-0");
+    }
+  }),
+    {
+      threshold: 0.4,
+    };
+});
+text.forEach((text) => observer1.observe(text));
+
+const mobileMenuCloseBtn = document.getElementById("mobile-menu-close")
+const mobileMenu = document.getElementById("mobile-menu")
+const hamBtn = document.getElementById("ham-btn")
+
+
+mobileMenuCloseBtn.addEventListener("click", ()=>{
+  mobileMenu.classList.add("-translate-x-full")
+})
+hamBtn.addEventListener("click", ()=>{
+  mobileMenu.classList.remove("-translate-x-full")
+})

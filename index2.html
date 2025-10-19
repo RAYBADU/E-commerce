@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="[scrollbar-gutter:stable]">
+<html lang="en" class="[scrollbar-gutter:stable] scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,33 +21,35 @@
   </head>
 
   <body class="font-[inter] bg-[#F2F0F1] text-gray-900" id="body">
-    <!-- Top Header -->
+    <!-- TOP HEADER -->
     <header class="fixed top-0 w-full z-50">
       <p class="text-center bg-black text-white py-3 text-sm md:text-base">
         Sign up and get 20% off your first order.
         <a
           href="#"
-          class="underline hover:text-orange-500 transition duration-300 px-2"
+          class="underline hover:text-orange-500 transition duration-300"
         >
-          Sign Up Now
+          Sign Up
         </a>
       </p>
     </header>
 
-    <!-- Navbar -->
-    <nav class="fixed top-[50px] w-full bg-white shadow-md z-40">
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-[45px] w-full bg-white shadow-md z-50 max-md:top-[40px]"
+    >
       <div
         class="container mx-auto flex items-center justify-between px-5 py-3"
       >
-        <!-- Hamburger for small screens -->
+        <!-- HAMBURGER FOR  SMALL SCREENS -->
         <div class="md:hidden">
-          <i class="fa-solid fa-bars text-2xl cursor-pointer"></i>
+          <i class="fa-solid fa-bars text-2xl cursor-pointer" id="ham-btn"></i>
         </div>
 
-        <!-- Logo -->
+        <!-- LOGO -->
         <p class="text-3xl md:text-4xl font-bold">SHOP.CO</p>
 
-        <!-- Menu Links -->
+        <!-- MENU LINKS -->
         <ul class="hidden md:flex items-center space-x-6">
           <li>
             <a
@@ -55,15 +57,16 @@
               class="flex items-center gap-1 hover:text-gray-500 transition duration-300"
             >
               Shop
-              <i class="fa-solid fa-caret-down text-gray-500"></i>
             </a>
           </li>
-          <li><a href="#" class="hover:text-gray-500">On Sale</a></li>
-          <li><a href="#" class="hover:text-gray-500">New Arrivals</a></li>
-          <li><a href="#" class="hover:text-gray-500">Brands</a></li>
+          <li><a href="#on-sale" class="hover:text-gray-500">On Sale</a></li>
+          <li>
+            <a href="#new-arrival" class="hover:text-gray-500">New Arrivals</a>
+          </li>
+          <li><a href="#brands" class="hover:text-gray-500">Brands</a></li>
         </ul>
 
-        <!-- Search Bar -->
+        <!-- SEARCH BAR -->
         <div class="relative hidden md:block">
           <i
             class="fa-solid fa-magnifying-glass absolute top-3 left-4 text-gray-500"
@@ -75,7 +78,7 @@
           />
         </div>
 
-        <!-- Icons -->
+        <!-- ICONS -->
         <div class="flex items-center space-x-4 md:space-x-6">
           <i
             class="fa-solid fa-cart-shopping text-lg md:text-xl cursor-pointer hover:scale-110 transition"
@@ -89,29 +92,35 @@
       </div>
     </nav>
 
-    <!-- Main Section -->
+    <!-- MAIN SECTION -->
     <main class="pt-[120px]">
-      <!-- section 1 -->
+      <!-- SECTION 1 -->
       <section class="pt-[30px] container mx-auto">
         <div class="grid place-items-center sm:grid-cols-1 md:grid-cols-2">
-          <!-- Text -->
+          <!-- TEXT -->
           <div class="py-4 px-5">
-            <h1 class="font-[inter] font-bold text-5xl max-md:text-xl">
+            <h1
+              class="font-[inter] font-bold text-5xl max-md:text-xl text opacity-0 transition-all duration-800 -translate-y-5"
+            >
               FIND CLOTHES THAT MATCHES YOUR STYLE
             </h1>
-            <p class="sm:text-sm md:text-lg text-gray-500 mt-5">
+            <p
+              class="sm:text-sm md:text-lg text-gray-500 mt-5 text opacity-0 transition-all duration-800 -translate-y-5"
+            >
               Browse through our diverse range of meticulously crafted garments,
               designed to bring out your individuality and cater to your sense
               of style.
             </p>
-            <!-- Button -->
+            <!-- BUTTON -->
             <button
-              class="bg-black text-white mt-5 rounded-full px-8 py-4 hover:opacity-[0.8] transition duration-300 cursor-pointer max-md:px-4 max-md:py-3 max-md:text-sm max-md:container"
+              class="bg-black text-white mt-5 rounded-full px-8 py-4 hover:opacity-[0.8] transition duration-300 cursor-pointer max-md:px-4 max-md:py-3 max-md:text-sm max-md:container text opacity-0 transition-all duration-800 -translate-y-5"
             >
               Shop Now
             </button>
-            <!-- Stats -->
-            <div class="grid grid-cols-3 gap-4 mt-5">
+            <!-- STATS -->
+            <div
+              class="grid grid-cols-3 gap-4 mt-5 text opacity-0 transition-all duration-800 -translate-y-5"
+            >
               <div class="max-md:col-span-6">
                 <h1 class="text-3xl max-md:text-xl font-semibold">200+</h1>
                 <p class="text-gray-500">International Brands</p>
@@ -127,7 +136,7 @@
             </div>
           </div>
 
-          <!-- Image -->
+          <!-- IMAGE -->
           <div>
             <img
               src="trendy-fashion-couple.jpg"
@@ -137,7 +146,7 @@
           </div>
         </div>
       </section>
-      <!-- advert section -->
+      <!-- ADVERT SECTION  -->
       <section
         class="bg-black py-5 px-4 grid grid-cols-3 md:grid-cols-5 place-items-center gap-6"
       >
@@ -150,7 +159,7 @@
 
       <!-- overlay -->
       <div
-        class="inset-0 hidden fixed bg-[#00000080] transition-all duration-800"
+        class="inset-0 hidden fixed z-[1000] bg-[#00000080] transition-all duration-800"
         id="cart-card"
       >
         <!-- Cart modal -->
@@ -217,27 +226,6 @@
                 </div>
               </div>
             </div>
-            <!-- third item -->
-            <div class="flex rounded-lg bg-white shadow-md p-4 mt-5" id="item3">
-              <img src="jeans.png" alt="" class="w-20 h-30 rounded-lg" />
-              <div class="text px-4">
-                <p class="text-xl font-semibold">Skinny Fit Jeans</p>
-                <p>Size: <span class="text-gray-500">Large</span></p>
-                <p>Color: <span class="text-gray-500">Blue</span></p>
-                <p
-                  class="font-semibold text-2xl max-md:text-lg mt-2"
-                  id="price3"
-                >
-                  $250
-                </p>
-                <div class="space-x-5 flex items-center">
-                  <button class="mt-2 cursor-pointer" id="dustbin3">🗑️</button>
-                  <button class="text-2xl cursor-pointer" id="minus3">-</button>
-                  <p class="" id="value3">1</p>
-                  <button class="text-2xl cursor-pointer" id="add3">+</button>
-                </div>
-              </div>
-            </div>
           </div>
           <button
             class="bg-black text-white px-2 py-3 rounded-full container mx-auto max-md:text-sm cursor-pointer hover:opacity-[0.8] transition duration-300"
@@ -248,10 +236,13 @@
         </div>
       </div>
 
-      <!--  checkout card -->
-      <div class="fixed inset-0 bg-[#00000080] hidden" id="checkout-card">
+      <!--  CHECKOUT CARD -->
+      <div
+        class="fixed z-[1000] inset-0 bg-[#00000080] hidden"
+        id="checkout-card"
+      >
         <div
-          class="absolute bg-white rounded-lg p-5 transform top-1/2 left-1/2 -translate-1/2 shadow-md w-[30rem] max-md:w-[20rem]"
+          class="absolute z-[1000] bg-white rounded-lg p-5 transform top-1/2 left-1/2 -translate-1/2 shadow-md w-[30rem] max-md:w-[20rem]"
         >
           <h1 class="font-semibold text-2xl max-md:text-xl">Order Summary</h1>
           <div class="flex justify-between text-gray-500 mt-10">
@@ -279,35 +270,474 @@
         </div>
       </div>
 
-      <!-- user profile -->
-      <div class="fixed inset-0 bg-[#00000080] hidden" id="user-card">
+      <!-- USER PROFILE -->
+      <div class="fixed z-[1000] inset-0 bg-[#00000080] hidden" id="user-card">
         <div
           class="bg-white p-5 rounded-lg w-[20rem] md:w-[30rem] absolute top-1/2 left-1/2 -translate-1/2"
         >
+          <button
+            class="absolute top-5 right-5 text-2xl md:text-4xl cursor-pointer"
+            id="user-close-btn"
+          >
+            &times
+          </button>
           <p class="font-semibold md:text-2xl">Your Account</p>
           <div class="flex items-center space-x-4">
             <img
               src="user.jpg"
               alt="user"
-              class="w-10 md:w-20 rounded-full mt-5"
+              class="size-15 md:size-15 rounded-full mt-5"
             />
 
             <div>
-              <p class="text-gray-500">Mary Jane</p>
-              <p class="text-gray-500">maryjane@gmail.com</p>
+              <p class="text-gray-500">Raymond Afrani</p>
+              <p class="text-gray-500">raymond.afrani@gmail.com</p>
             </div>
           </div>
           <p class="mt-2 py-2">Order history</p>
           <p class="py-1">Profile Settings</p>
           <p class="py-1">Saved Addresses</p>
-         <a href="index.html"> <button
-            class="mx-auto text-center container bg-black text-white py-2 rounded-lg mt-4 cursor-pointer hover:opacity-[0.8] transition-all"
-            id="log-out"
+          <a href="index.html">
+            <button
+              class="mx-auto text-center container bg-black text-white py-2 rounded-lg mt-4 cursor-pointer hover:opacity-[0.8] transition-all"
+              id="log-out"
+            >
+              Logout
+            </button></a
           >
-            Logout
-          </button></a>
         </div>
       </div>
+
+      <!-- MENU NAV TOGGLE -->
+      <div
+        class="fixed top-0 bg-white inset-0 z-[10000] -translate-x-full transition-all duration-400"
+        id="mobile-menu"
+      >
+        <button
+          class="absolute right-8 top-5 text-4xl cursor-pointer"
+          id="mobile-menu-close"
+        >
+          &times
+        </button>
+        <h1 class="text-center mt-20 font-bold text-2xl">SHOP.CO</h1>
+        <ul class="text-center mt-20 space-y-4">
+          <li><a href="#">Shop</a></li>
+          <li><a href="#on-sale">On Sale</a></li>
+          <li><a href="#new-arrivals">New Arrivals</a></li>
+          <li><a href="#brands">Brands</a></li>
+        </ul>
+      </div>
+
+      <!--  NEW ARRIVAL SECTION -->
+      <section class="py-5 mt-5 container mx-auto px-5" id="new-arrival">
+        <h1 class="text-center font-bold text-2xl md:text-3xl">NEW ARRIVALS</h1>
+        <div
+          class="grid place-items-center gap-4 md:grid-cols-2 lg:grid-cols-4 mt-5"
+        >
+          <div
+            class="bg-white w-70 p-4 mx-auto shadow-lg py-5 section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <img
+              src="tshirt-tape.png"
+              alt="Black shirt"
+              class="w-50 h-60 rounded-lg mx-auto"
+            />
+            <p class="mt-4 font-semibold">T-Shirt with Tape Details</p>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star-half fa-beat-fade text-yellow-500"></i>
+            <span>4.5/5</span>
+            <p class="text-xl font-semibold mt-2">$120</p>
+          </div>
+          <div
+            class="bg-white w-70 p-4 mx-auto shadow-lg py-5 section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <img src="jeans.png" alt="" class="w-50 h-60 rounded-lg mx-auto" />
+            <p class="mt-4 font-semibold">Skinny Fit Jeans Details</p>
+
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star-half fa-beat-fade text-yellow-500"></i>
+            <span>3.5/5</span>
+            <div class="flex items-center space-x-4">
+              <p class="text-xl font-semibold mt-2">$240</p>
+              <span
+                class="text-xl text-gray-400 font-semibold line-through mt-2"
+                >$250</span
+              >
+              <div class="mt-2 bg-[#FF33331A] text-red-500 rounded-full p-1">
+                -20%
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white w-70 p-4 mx-auto shadow-lg py-5 section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <img src="shirt2.png" alt="" class="w-50 h-60 rounded-lg mx-auto" />
+            <p class="mt-4 font-semibold">Checkered Shirt</p>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star-half fa-beat-fade text-yellow-500"></i>
+            <span>4.5/5</span>
+            <p class="text-xl font-semibold mt-2">$180</p>
+          </div>
+          <div
+            class="bg-white w-70 p-4 mx-auto shadow-lg py-5 section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <img
+              src="sleeve striped.png"
+              alt=""
+              class="w-50 h-60 rounded-lg mx-auto"
+            />
+            <p class="mt-4 font-semibold">Sleeve Striped T- Shirt</p>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star-half fa-beat-fade text-yellow-500"></i>
+            <span>4.5/5</span>
+            <div class="flex items-center space-x-4">
+              <p class="text-xl font-semibold mt-2">$130</p>
+              <span
+                class="text-xl text-gray-400 font-semibold line-through mt-2"
+                >$160</span
+              >
+              <div class="mt-2 bg-[#FF33331A] text-red-500 rounded-full p-1">
+                -30%
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <button
+            class="text-center rounded-full p-2 px-8 bg-transparent outline mt-10 md:text-lg cursor-pointer hover:bg-black hover:text-white transition-all duration-300"
+          >
+            View All
+          </button>
+        </div>
+        <!--TOP SELLING  -->
+        <h1
+          class="text-center font-bold text-2xl md:text-3xl mt-20"
+          id="on-sale"
+        >
+          TOP SELLING
+        </h1>
+        <div
+          class="grid place-items-center gap-4 md:grid-cols-2 lg:grid-cols-4 mt-5"
+        >
+          <div
+            class="bg-white w-70 p-4 mx-auto shadow-lg py-5 section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <img
+              src="vertical striped shirt.png"
+              alt="Black shirt"
+              class="w-50 h-60 rounded-lg mx-auto"
+            />
+            <p class="mt-4 font-semibold">Vertical Striped Shirt</p>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <span>5/5</span>
+            <p class="text-xl font-semibold mt-2">$212</p>
+          </div>
+          <div
+            class="bg-white w-70 p-4 mx-auto shadow-lg py-5 section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <img
+              src="courage graphic t shirt.png"
+              alt=""
+              class="w-50 h-60 rounded-lg mx-auto"
+            />
+            <p class="mt-4 font-semibold">Courage Graphic T-Shirt</p>
+
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <span>4.0/5</span>
+            <div class="flex items-center space-x-4">
+              <p class="text-xl font-semibold mt-2">$240</p>
+              <span
+                class="text-xl text-gray-400 font-semibold line-through mt-2"
+                >$145</span
+              >
+              <div class="mt-2 bg-[#FF33331A] text-red-500 rounded-full p-1">
+                -20%
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white w-70 p-4 mx-auto shadow-lg py-5 section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <img
+              src="loose fit bermuda shorts.png"
+              alt=""
+              class="w-50 h-60 rounded-lg mx-auto"
+            />
+            <p class="mt-4 font-semibold">Checkered Shirt</p>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <span>3.0/5</span>
+            <p class="text-xl font-semibold mt-2">$80</p>
+          </div>
+          <div
+            class="bg-white w-70 p-4 mx-auto shadow-lg py-5 section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <img
+              src="faded skinny jeans.png"
+              alt=""
+              class="w-50 h-60 rounded-lg mx-auto"
+            />
+            <p class="mt-4 font-semibold">Faded Skinny Jeans</p>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star-half fa-beat-fade text-yellow-500"></i>
+            <span>4.5/5</span>
+            <div class="flex items-center space-x-4">
+              <p class="text-xl font-semibold mt-2">$130</p>
+              <span
+                class="text-xl text-gray-400 font-semibold line-through mt-2"
+                >$210</span
+              >
+              <div class="mt-2 bg-[#FF33331A] text-red-500 rounded-full p-1">
+                -30%
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <button
+            class="text-center rounded-full p-2 px-8 bg-transparent outline mt-10 md:text-lg cursor-pointer hover:bg-black hover:text-white transition-all duration-300"
+          >
+            View All
+          </button>
+        </div>
+      </section>
+
+      <!-- BROWSE BY DRESS STYLE -->
+      <section class="bg-gray-100 mt-10 container mx-auto py-10" id="brands">
+        <h1 class="text-center font-bold md:text-3xl">BROWSE BY DRESS STYLE</h1>
+        <div
+          class="grid place-items-center md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5"
+        >
+          <div
+            class="w-60 section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <img
+              src="casual.png"
+              alt=""
+              class="w-60 h-60 rounded-lg object-cover"
+            />
+            <p class="text-center font-bold md:text-2xl">Casual</p>
+          </div>
+          <div
+            class="w-60 section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <img
+              src="formal.png"
+              alt=""
+              class="w-60 h-60 rounded-lg object-cover"
+            />
+            <p class="text-center font-bold md:text-2xl">Formal</p>
+          </div>
+          <div
+            class="w-60 section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <img
+              src="party.png"
+              alt=""
+              class="w-60 h-60 object-cover rounded-lg"
+            />
+            <p class="text-center font-bold md:text-2xl">Party</p>
+          </div>
+          <div
+            class="w-60 section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <img
+              src="gym.png"
+              alt=""
+              class="w-60 h-60 rounded-lg object-cover object-top"
+            />
+            <p class="text-center font-bold md:text-2xl">Gym</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEW SECTION -->
+      <section class="mt-10 py-5 px-2">
+        <h1 class="font-bold md:text-3xl text-center">OUR HAPPY CUSTOMERS</h1>
+        <div class="grid md:grid-cols-3 place-items-center gap-4 mt-5">
+          <div
+            class="card max-w-sm bg-white p-2 py-4 rounded-lg shadow-md section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <p class="mt-2 font-semibold">
+              Sarah M.
+              <span
+                ><i class="fa-solid fa-circle-check text-green-500"></i
+              ></span>
+            </p>
+            <p class="text-gray-500">
+              "I'm blown away by the quality and style of the clothes I received
+              from Shop.co. From casual wear to elegant dresses, every piece
+              I've bought has exceeded my expectations.”
+            </p>
+          </div>
+          <div
+            class="card max-w-sm bg-white p-2 py-4 rounded-lg shadow-md section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <p class="mt-2 font-semibold">
+              Alex K.
+              <span
+                ><i class="fa-solid fa-circle-check text-green-500"></i
+              ></span>
+            </p>
+            <p class="text-gray-500">
+              "Finding clothes that align with my personal style used to be a
+              challenge until I discovered Shop.co. The range of options they
+              offer is truly remarkable, catering to a variety .”
+            </p>
+          </div>
+          <div
+            class="card max-w-sm bg-white p-2 py-4 rounded-lg shadow-md section opacity-0 transition-all duration-800 -translate-x-12"
+          >
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <i class="fa-solid fa-star fa-beat-fade text-yellow-500"></i>
+            <p class="mt-2 font-semibold">
+              James L.
+              <span
+                ><i class="fa-solid fa-circle-check text-green-500"></i
+              ></span>
+            </p>
+            <p class="text-gray-500">
+              "As someone who's always on the lookout for unique fashion pieces,
+              I'm thrilled to have stumbled upon Shop.co. The selection of
+              clothes is not .”
+            </p>
+          </div>
+        </div>
+
+        <!-- NEWSLETTER SECTION -->
+        <div
+          class="bg-black text-white container mx-auto rounded-xl p-5 mt-10 py-15 max-md:py-8 text opacity-0 transition-all duration-800 -translate-y-5"
+        >
+          <div class="grid place-items-center md:grid-cols-2">
+            <p class="text-3xl max-md:text-xl font-bold">
+              STAY UPDATED ABOUT OUR LATEST OFFERS
+            </p>
+            <div class="space-y-4 max-md:mt-8">
+              <input
+                type="email"
+                name=""
+                id=""
+                placeholder="Enter your email address"
+                class="w-full py-3 p-5 bg-white text-gray-500 rounded-full outline-none"
+              />
+              <button
+                class="bg-white text-black rounded-full w-full py-2 cursor-pointer hover:opacity-[0.8] transition"
+              >
+                Subscribe to Newsletter
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FOOTER -->
+      <footer class="py-5 bg-[#F0F0F0] px-5">
+        <div
+          class="grid md:grid-cols-5 text opacity-0 transition-all duration-800 -translate-y-5"
+        >
+          <div>
+            <p class="text-3xl md:text-4xl font-bold">SHOP.CO</p>
+            <p class="mt-5 text-gray-500">
+              We have clothes that suits your style and which you’re proud to
+              wear. From women to men.
+            </p>
+            <div class="icons flex space-x-4 mt-4">
+              <i
+                class="fa-brands fa-facebook md:text-xl cursor-pointer hover:scale-[1.2] transition"
+              ></i>
+              <i
+                class="fa-brands fa-twitter md:text-xl cursor-pointer hover:scale-[1.2] transition"
+              ></i>
+              <i
+                class="fa-brands fa-instagram md:text-xl cursor-pointer hover:scale-[1.2] transition"
+              ></i>
+              <i
+                class="fa-brands fa-github md:text-xl cursor-pointer hover:scale-[1.2] transition"
+              ></i>
+            </div>
+          </div>
+          <!-- links -->
+          <ul class="mt-4 space-y-2 text-gray-500">
+            <p class="text-black font-semibold">COMPANY</p>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+          <!-- links -->
+          <ul class="mt-4 space-y-2 text-gray-500">
+            <p class="text-black font-semibold">HELP</p>
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">Delivery Details</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+          <!-- links -->
+          <ul class="mt-4 space-y-2 text-gray-500">
+            <p class="text-black font-semibold">FAQ</p>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Manage Deliveries</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Payments</a></li>
+          </ul>
+          <!-- links -->
+          <ul class="mt-4 space-y-2 text-gray-500">
+            <p class="text-black font-semibold">RESOURCES</p>
+            <li><a href="#">Free eBooks</a></li>
+            <li><a href="#">Development Tutorial</a></li>
+            <li><a href="#">How to - Blog</a></li>
+            <li><a href="#">Youtube Playlist</a></li>
+          </ul>
+        </div>
+        <div
+          class="border-1 p-5 mt-10 flex max-md:block max-md:justify-center items-center justify-between"
+        >
+          <p class="mt-5 text-gray-500 max-md:text-center">
+            Shop.co &copy 2000 - 2023. Cloned by Raymond. All Rights Reserved
+          </p>
+          <div class="icons mt-5 max-md:text-center">
+            <i class="fa-brands fa-cc-visa md:text-xl"></i>
+            <i class="fa-brands fa-cc-mastercard md:text-xl"></i>
+            <i class="fa-brands fa-cc-paypal md:text-xl"></i>
+            <i class="fa-brands fa-cc-apple-pay md:text-xl"></i>
+            <i class="fa-brands fa-google-pay md:text-xl"></i>
+          </div>
+        </div>
+      </footer>
     </main>
 
     <script src="app.js"></script>
